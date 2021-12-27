@@ -7,6 +7,6 @@ def test_2_sub(num1,num2):
     assert num1 >= 0 and num2 >=0, "Number is less than Zero"
     return num1-num2
 
-
+print("start testing")
 print(test_1_add(2,3))
 print(test_2_sub(-1,3))

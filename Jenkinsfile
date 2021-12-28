@@ -1,23 +1,9 @@
-pipeline{
-    agent{
-        docker{
-            image 'python:3.9-alpine3.15'
-        }
-    }
+pipeline {
+    agent { docker { image 'python:3.10.1-alpine' } }
     stages {
-        stage('Build') {
+        stage('build') {
             steps {
                 sh 'python --version'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh 'echo Test'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh 'echo Build'
             }
         }
     }
